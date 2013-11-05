@@ -4,8 +4,10 @@ import sun.net.www.protocol.http.HttpURLConnection;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
@@ -116,21 +118,58 @@ public class SMSUser implements java.io.Serializable{
 
         Date now = new Date();       //now!
 
-        String csvString = "----" + currentUser.getLocation() + "-" + now + "-" + currentUser.getIssueCategoryID() + "-" + currentUser.getCategoryName() + "-" + currentUser.getLikertScale() + "-" + currentUser.getDescription() + "-" + currentUser.getPhoneNumber();
+  //      String csvString = "----" + currentUser.getLocation() + "-" + now + "-" + currentUser.getIssueCategoryID() + "-" + currentUser.getCategoryName() + "-" + currentUser.getLikertScale() + "-" + currentUser.getDescription() + "-" + currentUser.getPhoneNumber();
                                           //csv string to send to db
         int responseCode;
         HttpURLConnection con;
         boolean wasGetSuccessful = true;
         do{
-            String url = "http://smsdatafest.azurewebsites.net/api/issue?value=csvString";
+
+            // Construct data
+            String data = "";
+
+            data += URLEncoder.encode("LocationDescription", "UTF-8") + "=" + URLEncoder.encode(currentUser.getLocation(), "UTF-8");
+            data += URLEncoder.encode("Timestamp", "UTF-8") + "=" + URLEncoder.encode(now.toString(),"UTF-8");
+            data += URLEncoder.encode("CategoryId", "UTF-8") + "=" + URLEncoder.encode(String.valueOf(currentUser.getIssueCategoryID()),"UTF-8");
+            data += URLEncoder.encode("CategoryDescription", "UTF-8") + "=" + URLEncoder.encode(currentUser.getCategoryName(), "UTF-8");
+            data += URLEncoder.encode("LikertScale", "UTF-8") + "=" + URLEncoder.encode(String.valueOf(currentUser.getLikertScale()), "UTF-8");
+            data += URLEncoder.encode("IssueDescription", "UTF-8") + "=" + URLEncoder.encode(currentUser.getDescription(), "UTF-8");
+            data += URLEncoder.encode("PhoneNumber", "UTF-8") + "=" + URLEncoder.encode(currentUser.getPhoneNumber(), "UTF-8");
+
+
+            String url = "http://smsdatafest.azurewebsites.net/api/Issue";
                                                  //url to post to
             URL obj = new URL(url);
-
                 con = (HttpURLConnection) obj.openConnection();     //opens connection
 
-            con.setRequestMethod("POST");       //POST method
-            con.setRequestProperty("Content-Length", "" +
-                    csvString.length());
+
+            // Send data
+            con.setDoOutput(true);
+            con.setDoInput(true); //
+
+            // No caching, we want the real thing.
+            con.setUseCaches (false);
+            // Specify the content type.
+            con.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");
+
+            OutputStreamWriter wr = new OutputStreamWriter(con.getOutputStream());
+            wr.write(data);
+            wr.flush();
+
+            // Get the response
+            BufferedReader rd = new BufferedReader(new InputStreamReader(con.getInputStream()));
+            String line;
+            while ((line = rd.readLine()) != null) {
+                // Process line...
+                System.out.println(line);
+            }
+            wr.close();
+            rd.close();
+
+
+//            con.setRequestMethod("POST");       //POST method
+//            con.setRequestProperty("Content-Length", "" +
+//                    csvString.length());
             responseCode = con.getResponseCode();     //get the response code
 
 
