@@ -258,7 +258,7 @@ public class SMSAction {
                         GVoiceSMS.sendSMS("Thank you! You are all set",phoneNumber);       //we're done!!
                         userArrayList.get(currentUserIndex).addToMessageArray(new SMS(null, "Thank you! You are all set", new Date()));
 
-                //HTTP POST... doesn't work yet; currently throws response code 400
+                //HTTP POST... doesn't work yet; currently throws response code 500, IOException
                         try {
                             SMSUser.HTTPPost(userArrayList.get(currentUserIndex));
                         } catch (IOException e) {

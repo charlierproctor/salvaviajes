@@ -128,13 +128,27 @@ public class SMSUser implements java.io.Serializable{
             // Construct data
             String data = "";
 
-            data += URLEncoder.encode("LocationDescription", "UTF-8") + "=" + URLEncoder.encode(currentUser.getLocation(), "UTF-8");
-            data += URLEncoder.encode("Timestamp", "UTF-8") + "=" + URLEncoder.encode(now.toString(),"UTF-8");
-            data += URLEncoder.encode("CategoryId", "UTF-8") + "=" + URLEncoder.encode(String.valueOf(currentUser.getIssueCategoryID()),"UTF-8");
-            data += URLEncoder.encode("CategoryDescription", "UTF-8") + "=" + URLEncoder.encode(currentUser.getCategoryName(), "UTF-8");
-            data += URLEncoder.encode("LikertScale", "UTF-8") + "=" + URLEncoder.encode(String.valueOf(currentUser.getLikertScale()), "UTF-8");
-            data += URLEncoder.encode("IssueDescription", "UTF-8") + "=" + URLEncoder.encode(currentUser.getDescription(), "UTF-8");
-            data += URLEncoder.encode("PhoneNumber", "UTF-8") + "=" + URLEncoder.encode(currentUser.getPhoneNumber(), "UTF-8");
+            data += "&&&&";
+//            data += URLEncoder.encode("LocationDescription", "UTF-8") + "=";
+            data += URLEncoder.encode(currentUser.getLocation(), "UTF-8");
+            data += "&";
+//            data += URLEncoder.encode("Timestamp", "UTF-8") + "=";
+            data += URLEncoder.encode(now.toString(),"UTF-8");
+            data += "&";
+//            data += URLEncoder.encode("CategoryId", "UTF-8") + "=";
+            data += URLEncoder.encode(String.valueOf(currentUser.getIssueCategoryID()),"UTF-8");
+            data += "&";
+//            data += URLEncoder.encode("CategoryDescription", "UTF-8") + "=";
+            data += URLEncoder.encode(currentUser.getCategoryName(), "UTF-8");
+            data += "&";
+//            data += URLEncoder.encode("LikertScale", "UTF-8") + "=";
+            data += URLEncoder.encode(String.valueOf(currentUser.getLikertScale()), "UTF-8");
+            data += "&";
+//            data += URLEncoder.encode("IssueDescription", "UTF-8") + "=";
+            data += URLEncoder.encode(currentUser.getDescription(), "UTF-8");
+            data += "&";
+//            data += URLEncoder.encode("PhoneNumber", "UTF-8") + "=";
+            data += URLEncoder.encode(currentUser.getPhoneNumber(), "UTF-8");
 
 
             String url = "http://smsdatafest.azurewebsites.net/api/Issue";
@@ -156,15 +170,7 @@ public class SMSUser implements java.io.Serializable{
             wr.write(data);
             wr.flush();
 
-            // Get the response
-            BufferedReader rd = new BufferedReader(new InputStreamReader(con.getInputStream()));
-            String line;
-            while ((line = rd.readLine()) != null) {
-                // Process line...
-                System.out.println(line);
-            }
             wr.close();
-            rd.close();
 
 
 //            con.setRequestMethod("POST");       //POST method
