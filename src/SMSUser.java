@@ -129,7 +129,8 @@ public class SMSUser implements java.io.Serializable{
                 con = (HttpURLConnection) obj.openConnection();     //opens connection
 
             con.setRequestMethod("POST");       //POST method
-
+            con.setRequestProperty("Content-Length", "" +
+                    csvString.length());
             responseCode = con.getResponseCode();     //get the response code
 
 

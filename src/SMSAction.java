@@ -259,13 +259,13 @@ public class SMSAction {
                         userArrayList.get(currentUserIndex).addToMessageArray(new SMS(null, "Thank you! You are all set", new Date()));
 
                 //HTTP POST... doesn't work yet; currently throws response code 400
-//                        try {
-//                            SMSUser.HTTPPost(userArrayList.get(currentUserIndex));
-//                        } catch (IOException e) {
-//                            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-//                        } catch (InterruptedException e) {
-//                            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-//                        }
+                        try {
+                            SMSUser.HTTPPost(userArrayList.get(currentUserIndex));
+                        } catch (IOException e) {
+                            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+                        }
 
 
                         GVoiceSMS.deleteSMS(currentUser);        //clears the user's thread (and hence allows for new conversations in the future
