@@ -145,8 +145,8 @@ public class SMSAction {
                     //AND HERE COMES THE ACTUAL LOGIC!!!
                     if(messageArray.size()==1){     //if this is the first message from a user
                     //then we prompt whether he would like to report an issue or query...
-                    GVoiceSMS.sendSMS("Thank you for contacting Datafest SMS Team! Would you like to report an issue, or find issues in your area?", phoneNumber);
-                    userArrayList.get(currentUserIndex).addToMessageArray(new SMS( null,"Thank you for contacting Datafest SMS Team! Would you like to report an issue, or find issues in your area?", new Date()));
+                    GVoiceSMS.sendSMS("Reply REPORT to report an issue.", phoneNumber);
+                    userArrayList.get(currentUserIndex).addToMessageArray(new SMS( null,"Reply REPORT to report an issue.", new Date()));
                 }
 
                 else if(messageArray.size()>=3 && smsString.toLowerCase().contains("report")){
@@ -155,32 +155,34 @@ public class SMSAction {
                     GVoiceSMS.sendSMS("You would like to file a report. Where are you?", phoneNumber);
                     userArrayList.get(currentUserIndex).addToMessageArray(new SMS( null,"You would like to file a report. Where are you?", new Date()));
 
-                } else if(messageArray.size()>=3 && smsString.toLowerCase().contains("query")){
-                        //if he responded "query", we prompt for his location
-                    GVoiceSMS.sendSMS("Please enter the location you would like to query.", phoneNumber);
-                        //add the message to his message array
-                    userArrayList.get(currentUserIndex).addToMessageArray(new SMS( null,"Please enter the location you would like to query.", new Date()));
-                } else if(messageArray.size()>=5 && (messageArray.get(messageArray.size()-2).equals("Please enter the location you would like to query.")
-                    || messageArray.get(messageArray.size()-3).equals("Please enter the location you would like to query."))){
-                        //if we just asked for his location we load the issues nearby from the database
-
-                    SMSUser issueToReturn = null;
-                    ArrayList<SMSUser> allReportedIssues = SMSJSON.getIssuesFromDB();    //loads all reported issues
-
-                    for(int i = 0; i<allReportedIssues.size(); i++){
-                        //searches through the array
-                        if(smsString.equalsIgnoreCase(allReportedIssues.get(i).getLocation())){
-                            //if there is a match
-                            issueToReturn = allReportedIssues.get(i);
-                            //we respond with the time and description of the incident
-                            String s1 = "The following incident was reported on " + issueToReturn.getTimestamp() + ": " + issueToReturn.getDescription();
-                            GVoiceSMS.sendSMS(s1,phoneNumber);
-                            //save it to his message array
-                            userArrayList.get(currentUserIndex).addToMessageArray(new SMS( null,s1, new Date()));
-                            GVoiceSMS.deleteSMS(currentUser);        //clears the user's thread (and hence allows for new conversations in the future
-                        }
-                    }
                 }
+//                    else if(messageArray.size()>=3 && smsString.toLowerCase().contains("query")){
+//                        //if he responded "query", we prompt for his location
+//                    GVoiceSMS.sendSMS("Please enter the location you would like to query.", phoneNumber);
+//                        //add the message to his message array
+//                    userArrayList.get(currentUserIndex).addToMessageArray(new SMS( null,"Please enter the location you would like to query.", new Date()));
+//                }
+//                    else if(messageArray.size()>=5 && (messageArray.get(messageArray.size()-2).equals("Please enter the location you would like to query.")
+//                    || messageArray.get(messageArray.size()-3).equals("Please enter the location you would like to query."))){
+//                        //if we just asked for his location we load the issues nearby from the database
+//
+//                    SMSUser issueToReturn = null;
+//                    ArrayList<SMSUser> allReportedIssues = SMSJSON.getIssuesFromDB();    //loads all reported issues
+//
+//                    for(int i = 0; i<allReportedIssues.size(); i++){
+//                        //searches through the array
+//                        if(smsString.equalsIgnoreCase(allReportedIssues.get(i).getLocation())){
+//                            //if there is a match
+//                            issueToReturn = allReportedIssues.get(i);
+//                            //we respond with the time and description of the incident
+//                            String s1 = "The following incident was reported on " + issueToReturn.getTimestamp() + ": " + issueToReturn.getDescription();
+//                            GVoiceSMS.sendSMS(s1,phoneNumber);
+//                            //save it to his message array
+//                            userArrayList.get(currentUserIndex).addToMessageArray(new SMS( null,s1, new Date()));
+//                            GVoiceSMS.deleteSMS(currentUser);        //clears the user's thread (and hence allows for new conversations in the future
+//                        }
+//                    }
+//                }
 
                 else if(messageArray.get(messageArray.size()-2).getContent().contains("Where are you?")
                     || messageArray.get(messageArray.size()-3).getContent().contains("Where are you?")){
@@ -213,7 +215,7 @@ public class SMSAction {
 
                     int issueCategoryID = categories.size();  //the issue category ID
                     for(int i=1; i<=categories.size(); i++){
-                        //this loop checks through the last text message to see which number it contains
+                        //this loop checks through the last text message to see which char it contains
                         if(messageArray.get(messageArray.size()-1).getContent().contains(getCharForNumber(i))){
                             issueCategoryID = i;
                             //and this number is set to the issueCategoryID
@@ -250,7 +252,7 @@ public class SMSAction {
                     //sets the likertScale value for the currentUser's spot in the arraylist
 
                     //creates the confirmation text message
-                    String response = "Thank you! Please confirm the following information:" + "Location ~ " + userArrayList.get(currentUserIndex).getLocation() + "; Category ~ " + userArrayList.get(currentUserIndex).getCategoryName() + "; Description ~ " + userArrayList.get(currentUserIndex).getDescription() + ". Reply YES to confirm; NO to change.";
+                    String response = "Thank you! Please confirm the following information:" + "Location ~ " + userArrayList.get(currentUserIndex).getLocation() + "; Category ~ " + userArrayList.get(currentUserIndex).getCategoryName() + "; Description ~ " + userArrayList.get(currentUserIndex).getDescription() + ". Reply YES to confirm.";
                     GVoiceSMS.sendSMS(response,phoneNumber);     //sends it out
                     userArrayList.get(currentUserIndex).addToMessageArray(new SMS(null, response, new Date()));
 
@@ -272,12 +274,14 @@ public class SMSAction {
 
 
                         GVoiceSMS.deleteSMS(currentUser);        //clears the user's thread (and hence allows for new conversations in the future
-                    } else if(smsString.toLowerCase().contains("no")){           //if the message contained "no"
-                        GVoiceSMS.sendSMS("What would you like to change?", phoneNumber);        //we have some work to do
-                        userArrayList.get(currentUserIndex).addToMessageArray(new SMS( null,"What would you like to change?", new Date()));
-
-                        //code to handle this to come...
                     }
+
+//                    else if(smsString.toLowerCase().contains("no")){           //if the message contained "no"
+//                        GVoiceSMS.sendSMS("What would you like to change?", phoneNumber);        //we have some work to do
+//                        userArrayList.get(currentUserIndex).addToMessageArray(new SMS( null,"What would you like to change?", new Date()));
+//
+//                        //code to handle this to come...
+//                    }
                 }
 
                 }

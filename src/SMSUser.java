@@ -1,16 +1,13 @@
 import com.techventus.server.voice.datatypes.records.SMS;
-
 import sun.net.www.protocol.http.HttpURLConnection;
-import java.io.BufferedReader;
+
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLEncoder;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Date;
+import java.util.UUID;
 
 /**
  * Created with IntelliJ IDEA.
@@ -117,7 +114,7 @@ public class SMSUser implements java.io.Serializable{
     public static void HTTPPost(SMSUser currentUser) throws IOException, InterruptedException {
 
         Date now = new Date();       //now!
-        String formattedDate = now.getMonth() + "-" + now.getDate() + "-" + now.getYear() + " " + now.getHours() + ":" + now.getMinutes() + now.getSeconds();
+        String formattedDate = now.getMonth() + "-" + now.getDate() + "-" + now.getYear() + " " + now.getHours() + ":" + now.getMinutes() + ":" + now.getSeconds();
 
         int responseCode;
         HttpURLConnection con;
@@ -127,20 +124,20 @@ public class SMSUser implements java.io.Serializable{
             // Construct data
             String data = "";
 
-            data += ",,,,";
-            data += URLEncoder.encode(currentUser.getLocation(), "UTF-8");
+            //IssueId,GUID,EncryptedFromInfo,ReportedOn,IssueDesc,CategoryId,City,State,Country,LocationDesc
+
+            data += "0,";
+            data += UUID.randomUUID().toString();
+            data += ",";
+            data += URLEncoder.encode(currentUser.getPhoneNumber(),"UTF-8");
             data += ",";
             data += URLEncoder.encode(formattedDate,"UTF-8");
             data += ",";
-            data += URLEncoder.encode(String.valueOf(currentUser.getIssueCategoryID()),"UTF-8");
-            data += ",";
-            data += URLEncoder.encode(currentUser.getCategoryName(), "UTF-8");
-            data += ",";
-            data += URLEncoder.encode(String.valueOf(currentUser.getLikertScale()), "UTF-8");
-            data += ",";
             data += URLEncoder.encode(currentUser.getDescription(), "UTF-8");
             data += ",";
-            data += URLEncoder.encode(currentUser.getPhoneNumber(), "UTF-8");
+            data += URLEncoder.encode(String.valueOf(currentUser.getIssueCategoryID()),"UTF-8");
+            data += ",,,,";
+            data += URLEncoder.encode(currentUser.getLocation(), "UTF-8");
 
 
             String url = "http://salvaviajes.azurewebsites.net/api/Issue";
@@ -157,6 +154,8 @@ public class SMSUser implements java.io.Serializable{
             con.setUseCaches (false);
             // Specify the content type.
             con.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");
+            con.setRequestMethod("POST");
+            con.connect();
 
             OutputStreamWriter wr = new OutputStreamWriter(con.getOutputStream());
             wr.write(data);
