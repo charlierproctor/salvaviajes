@@ -63,7 +63,7 @@ public class SMSUser implements java.io.Serializable{
         //loads in the category array
         String jsonCategories = "";
         try {
-            jsonCategories = SMSJSON.readUrl("http://smsdatafest.azurewebsites.net/api/Category");
+            jsonCategories = SMSJSON.readUrl("http://salvaviajes.azurewebsites.net/api/Category");
             //reads in the text from the url
         } catch (Exception e) {
             e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
@@ -117,41 +117,33 @@ public class SMSUser implements java.io.Serializable{
     public static void HTTPPost(SMSUser currentUser) throws IOException, InterruptedException {
 
         Date now = new Date();       //now!
+        String formattedDate = now.getMonth() + "-" + now.getDate() + "-" + now.getYear() + " " + now.getHours() + ":" + now.getMinutes() + now.getSeconds();
 
-  //      String csvString = "----" + currentUser.getLocation() + "-" + now + "-" + currentUser.getIssueCategoryID() + "-" + currentUser.getCategoryName() + "-" + currentUser.getLikertScale() + "-" + currentUser.getDescription() + "-" + currentUser.getPhoneNumber();
-                                          //csv string to send to db
         int responseCode;
         HttpURLConnection con;
-        boolean wasGetSuccessful = true;
+        boolean wasSuccessful = false;
         do{
 
             // Construct data
             String data = "";
 
-            data += "&&&&";
-//            data += URLEncoder.encode("LocationDescription", "UTF-8") + "=";
+            data += ",,,,";
             data += URLEncoder.encode(currentUser.getLocation(), "UTF-8");
-            data += "&";
-//            data += URLEncoder.encode("Timestamp", "UTF-8") + "=";
-            data += URLEncoder.encode(now.toString(),"UTF-8");
-            data += "&";
-//            data += URLEncoder.encode("CategoryId", "UTF-8") + "=";
+            data += ",";
+            data += URLEncoder.encode(formattedDate,"UTF-8");
+            data += ",";
             data += URLEncoder.encode(String.valueOf(currentUser.getIssueCategoryID()),"UTF-8");
-            data += "&";
-//            data += URLEncoder.encode("CategoryDescription", "UTF-8") + "=";
+            data += ",";
             data += URLEncoder.encode(currentUser.getCategoryName(), "UTF-8");
-            data += "&";
-//            data += URLEncoder.encode("LikertScale", "UTF-8") + "=";
+            data += ",";
             data += URLEncoder.encode(String.valueOf(currentUser.getLikertScale()), "UTF-8");
-            data += "&";
-//            data += URLEncoder.encode("IssueDescription", "UTF-8") + "=";
+            data += ",";
             data += URLEncoder.encode(currentUser.getDescription(), "UTF-8");
-            data += "&";
-//            data += URLEncoder.encode("PhoneNumber", "UTF-8") + "=";
+            data += ",";
             data += URLEncoder.encode(currentUser.getPhoneNumber(), "UTF-8");
 
 
-            String url = "http://smsdatafest.azurewebsites.net/api/Issue";
+            String url = "http://salvaviajes.azurewebsites.net/api/Issue";
                                                  //url to post to
             URL obj = new URL(url);
                 con = (HttpURLConnection) obj.openConnection();     //opens connection
@@ -173,13 +165,13 @@ public class SMSUser implements java.io.Serializable{
             wr.close();
 
 
-//            con.setRequestMethod("POST");       //POST method
-//            con.setRequestProperty("Content-Length", "" +
-//                    csvString.length());
             responseCode = con.getResponseCode();     //get the response code
 
+            if(responseCode>=200 && responseCode<300){
+               wasSuccessful = true;
+            }
 
-        } while (responseCode != 200);   //repeat the above while we aren't successful
+        } while (!wasSuccessful);   //repeat the above while we aren't successful
 
 
     }

@@ -5,7 +5,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
-import java.util.Iterator;
 
 /**
  * Created with IntelliJ IDEA.
@@ -123,7 +122,7 @@ public class SMSAction {
 
                       String jsonCategories = "";
                     try {
-                        jsonCategories = SMSJSON.readUrl("http://smsdatafest.azurewebsites.net/api/Category");
+                        jsonCategories = SMSJSON.readUrl("http://salvaviajes.azurewebsites.net/api/Category");
                         //reads in the text from the url
                     } catch (Exception e) {
                         e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
@@ -153,8 +152,8 @@ public class SMSAction {
                 else if(messageArray.size()>=3 && smsString.toLowerCase().contains("report")){
                     //if he responded with the keyword "report"
                     //then we ask for his location:
-                    GVoiceSMS.sendSMS("You would like to file. Where are you?", phoneNumber);
-                    userArrayList.get(currentUserIndex).addToMessageArray(new SMS( null,"You would like to file. Where are you?", new Date()));
+                    GVoiceSMS.sendSMS("You would like to file a report. Where are you?", phoneNumber);
+                    userArrayList.get(currentUserIndex).addToMessageArray(new SMS( null,"You would like to file a report. Where are you?", new Date()));
 
                 } else if(messageArray.size()>=3 && smsString.toLowerCase().contains("query")){
                         //if he responded "query", we prompt for his location
@@ -192,7 +191,7 @@ public class SMSAction {
                     //this creates the string to prompt for a category
                     StringBuffer sB = new StringBuffer("Please respond: ");
                     for(int i = 0; i<categories.size(); i++){
-                        String responseCode = String.valueOf(i +1);
+                        String responseCode = getCharForNumber(i);
                         sB.append(responseCode + " for " + categories.get(i) + "; ");
                     }
                     sB.append(".");
@@ -212,7 +211,7 @@ public class SMSAction {
                     int issueCategoryID = categories.size();  //the issue category ID
                     for(int i=1; i<=categories.size(); i++){
                         //this loop checks through the last text message to see which number it contains
-                        if(messageArray.get(messageArray.size()-1).getContent().contains(Integer.toString(i))){
+                        if(messageArray.get(messageArray.size()-1).getContent().contains(getCharForNumber(i))){
                             issueCategoryID = i;
                             //and this number is set to the issueCategoryID
                         }
@@ -258,7 +257,6 @@ public class SMSAction {
                         GVoiceSMS.sendSMS("Thank you! You are all set",phoneNumber);       //we're done!!
                         userArrayList.get(currentUserIndex).addToMessageArray(new SMS(null, "Thank you! You are all set", new Date()));
 
-                //HTTP POST... doesn't work yet; currently throws response code 500, IOException
                         try {
                             SMSUser.HTTPPost(userArrayList.get(currentUserIndex));
                         } catch (IOException e) {
@@ -284,4 +282,11 @@ public class SMSAction {
         return userArrayList;
 
     }
+
+    public static String getCharForNumber(int i) {
+        int j = (i-1)%25;
+        char[] alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".toCharArray();
+        return Character.toString(alphabet[i]);
+    }
+
 }
