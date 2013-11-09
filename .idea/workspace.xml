@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="e19b5e6f-5b13-4d58-8cdb-354c69e4a100" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SMSAction.java" afterPath="$PROJECT_DIR$/src/SMSAction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SMSUser.java" afterPath="$PROJECT_DIR$/src/SMSUser.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="DreamTeamApp.iws" />
@@ -11,14 +10,14 @@
     <file path="$PROJECT_DIR$/../Toni Harp 2013 iPhone App/javaproject/.idea/workspace.xml" changelist="e19b5e6f-5b13-4d58-8cdb-354c69e4a100" time="1383411595371" ignored="false" />
     <file path="/GVoiceSMS.java" changelist="e19b5e6f-5b13-4d58-8cdb-354c69e4a100" time="1383467377547" ignored="false" />
     <file path="/Main.java" changelist="e19b5e6f-5b13-4d58-8cdb-354c69e4a100" time="1383631829433" ignored="false" />
-    <file path="/SMSAction.java" changelist="e19b5e6f-5b13-4d58-8cdb-354c69e4a100" time="1384013384347" ignored="false" />
+    <file path="/SMSAction.java" changelist="e19b5e6f-5b13-4d58-8cdb-354c69e4a100" time="1384015196019" ignored="false" />
     <file path="/SMSUser.java" changelist="e19b5e6f-5b13-4d58-8cdb-354c69e4a100" time="1384012033888" ignored="false" />
     <file path="/SMSBasic.java" changelist="e19b5e6f-5b13-4d58-8cdb-354c69e4a100" time="1383631865772" ignored="false" />
     <file path="/SMSJSON.java" changelist="e19b5e6f-5b13-4d58-8cdb-354c69e4a100" time="1383631805890" ignored="false" />
     <file path="/QueryFlow.java" changelist="e19b5e6f-5b13-4d58-8cdb-354c69e4a100" time="1383506545672" ignored="false" />
     <file path="$PROJECT_DIR$/../Toni Harp 2013 iPhone App/javaproject/voterObjectIDs.txt" changelist="e19b5e6f-5b13-4d58-8cdb-354c69e4a100" time="1383681804931" ignored="false" />
     <file path="$PROJECT_DIR$/../Toni Harp 2013 iPhone App/javaproject/volunteerObjectIDs.txt" changelist="e19b5e6f-5b13-4d58-8cdb-354c69e4a100" time="1383681804931" ignored="false" />
-    <file path="/Dummy.txt" changelist="e19b5e6f-5b13-4d58-8cdb-354c69e4a100" time="1383687833231" ignored="false" />
+    <file path="/Dummy.txt" changelist="e19b5e6f-5b13-4d58-8cdb-354c69e4a100" time="1384015040379" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +69,7 @@
       </breakpoint>
     </breakpoint_any>
     <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
-      <breakpoint url="file://$PROJECT_DIR$/src/SMSAction.java" line="260" class="SMSAction" package="">
+      <breakpoint url="file://$PROJECT_DIR$/src/SMSAction.java" line="265" class="SMSAction" package="">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -138,7 +137,7 @@
       <file leaf-file-name="SMSAction.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/SMSAction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="289" column="5" selection-start="17662" selection-end="17662" vertical-scroll-proportion="9.874715">
+            <state line="135" column="47" selection-start="7649" selection-end="7649" vertical-scroll-proportion="-4.740319">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -523,7 +522,11 @@
       <created>1383687856264</created>
       <updated>1383687856264</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Http Post works (response code 204)&#10;-- user data is saved into database">
+      <created>1384015056479</created>
+      <updated>1384015056479</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -595,7 +598,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated HTTP Post procedure&#10;no longer throws ioexception; still gets response 500;&#10;data string updated; reader removed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Http Post works (response code 204)&#10;-- user data is saved into database" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -612,6 +615,7 @@
     <MESSAGE value="changed post method request url&#10;error -- post returns response code 411 (Length Required);&#10;attempted to set content length to csvString; but still get response 411" />
     <MESSAGE value="new HTTP Post procedure&#10;--now uses URLEncoder; throws IO Exception, response code 500" />
     <MESSAGE value="updated HTTP Post procedure&#10;no longer throws ioexception; still gets response 500;&#10;data string updated; reader removed" />
+    <MESSAGE value="Http Post works (response code 204)&#10;-- user data is saved into database" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -728,7 +732,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/SMSAction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="289" column="5" selection-start="17662" selection-end="17662" vertical-scroll-proportion="9.874715">
+        <state line="135" column="47" selection-start="7649" selection-end="7649" vertical-scroll-proportion="-4.740319">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

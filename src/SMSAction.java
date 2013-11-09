@@ -160,7 +160,8 @@ public class SMSAction {
                     GVoiceSMS.sendSMS("Please enter the location you would like to query.", phoneNumber);
                         //add the message to his message array
                     userArrayList.get(currentUserIndex).addToMessageArray(new SMS( null,"Please enter the location you would like to query.", new Date()));
-                } else if(messageArray.size()>=5 && messageArray.get(messageArray.size()-2).equals("Please enter the location you would like to query.")){
+                } else if(messageArray.size()>=5 && (messageArray.get(messageArray.size()-2).equals("Please enter the location you would like to query.")
+                    || messageArray.get(messageArray.size()-3).equals("Please enter the location you would like to query."))){
                         //if we just asked for his location we load the issues nearby from the database
 
                     SMSUser issueToReturn = null;
@@ -181,8 +182,9 @@ public class SMSAction {
                     }
                 }
 
-                else if(messageArray.get(messageArray.size()-2).getContent().contains("Where are you?")){
-                    //if two messages ago contains "Where are you?"
+                else if(messageArray.get(messageArray.size()-2).getContent().contains("Where are you?")
+                    || messageArray.get(messageArray.size()-3).getContent().contains("Where are you?")){
+                    //if two or three messages ago contains "Where are you?"
                     // they just responded to our prompting them for their location
 
                     //now we save their location to their user info in the userArrayList
@@ -202,7 +204,8 @@ public class SMSAction {
 
                 }
 
-                else if(messageArray.get(messageArray.size()-2).getContent().contains("Please respond:")){
+                else if(messageArray.get(messageArray.size()-2).getContent().contains("Please respond:")
+                            || messageArray.get(messageArray.size()-3).getContent().contains("Please respond:")){
                     //if the message two before contained "Please respond: " we prompt for a short description of the incident
                     GVoiceSMS.sendSMS("Thank you! Please provide a short description of the incident.",phoneNumber);
                     userArrayList.get(currentUserIndex).addToMessageArray(new SMS( null,"Thank you! Please provide a short description of the incident.", new Date()));
@@ -220,7 +223,8 @@ public class SMSAction {
                     userArrayList.get(currentUserIndex).setIssueCategoryID(issueCategoryID);
                 }
 
-                else if(messageArray.get(messageArray.size()-2).getContent().contains("Please provide a short description of the incident.")){
+                else if(messageArray.get(messageArray.size()-2).getContent().contains("Please provide a short description of the incident.")
+                     || messageArray.get(messageArray.size()-3).getContent().contains("Please provide a short description of the incident.")){
                     // if the message two before contained "Please provide a short description...
                     GVoiceSMS.sendSMS("Please rate the issue on a scale of 1-5.", phoneNumber);
                     userArrayList.get(currentUserIndex).addToMessageArray(new SMS( null,"Please rate the issue on a scale of 1-5.", new Date()));
@@ -252,7 +256,8 @@ public class SMSAction {
 
 
                 }
-                else if(messageArray.get(messageArray.size()-2).getContent().contains("Please confirm the following information")){
+                else if(messageArray.get(messageArray.size()-2).getContent().contains("Please confirm the following information")
+                        || messageArray.get(messageArray.size()-3).getContent().contains("Please confirm the following information")    ){
                     if(smsString.toLowerCase().contains("yes")){     //if the message included "yes"
                         GVoiceSMS.sendSMS("Thank you! You are all set",phoneNumber);       //we're done!!
                         userArrayList.get(currentUserIndex).addToMessageArray(new SMS(null, "Thank you! You are all set", new Date()));
