@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="e19b5e6f-5b13-4d58-8cdb-354c69e4a100" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SMSAction.java" afterPath="$PROJECT_DIR$/src/SMSAction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SMSUser.java" afterPath="$PROJECT_DIR$/src/SMSUser.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="DreamTeamApp.iws" />
@@ -19,8 +17,8 @@
     <file path="/QueryFlow.java" changelist="e19b5e6f-5b13-4d58-8cdb-354c69e4a100" time="1383506545672" ignored="false" />
     <file path="$PROJECT_DIR$/../Toni Harp 2013 iPhone App/javaproject/voterObjectIDs.txt" changelist="e19b5e6f-5b13-4d58-8cdb-354c69e4a100" time="1383681804931" ignored="false" />
     <file path="$PROJECT_DIR$/../Toni Harp 2013 iPhone App/javaproject/volunteerObjectIDs.txt" changelist="e19b5e6f-5b13-4d58-8cdb-354c69e4a100" time="1383681804931" ignored="false" />
-    <file path="/Dummy.txt" changelist="e19b5e6f-5b13-4d58-8cdb-354c69e4a100" time="1384015375632" ignored="false" />
-    <file path="/README.md" changelist="e19b5e6f-5b13-4d58-8cdb-354c69e4a100" time="1384041067841" ignored="false" />
+    <file path="/Dummy.txt" changelist="e19b5e6f-5b13-4d58-8cdb-354c69e4a100" time="1384041091008" ignored="false" />
+    <file path="/README.md" changelist="e19b5e6f-5b13-4d58-8cdb-354c69e4a100" time="1384041479739" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,7 +151,7 @@
       <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="34" selection-start="69" selection-end="69" vertical-scroll-proportion="0.15706806">
+            <state line="34" column="19" selection-start="1294" selection-end="1294" vertical-scroll-proportion="0.60732985">
               <folding />
             </state>
           </provider>
@@ -536,7 +534,11 @@
       <created>1384015383000</created>
       <updated>1384015383000</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="updated README">
+      <created>1384041100443</created>
+      <updated>1384041100443</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -608,7 +610,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated sms processing logic" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated README" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -627,6 +629,7 @@
     <MESSAGE value="updated HTTP Post procedure&#10;no longer throws ioexception; still gets response 500;&#10;data string updated; reader removed" />
     <MESSAGE value="Http Post works (response code 204)&#10;-- user data is saved into database" />
     <MESSAGE value="updated sms processing logic" />
+    <MESSAGE value="updated README" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -747,7 +750,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="34" selection-start="69" selection-end="69" vertical-scroll-proportion="0.15706806">
+        <state line="34" column="19" selection-start="1294" selection-end="1294" vertical-scroll-proportion="0.60732985">
           <folding />
         </state>
       </provider>
