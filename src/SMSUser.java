@@ -138,6 +138,10 @@ public class SMSUser implements java.io.Serializable{
             data += URLEncoder.encode(String.valueOf(currentUser.getIssueCategoryID()),"UTF-8");
             data += ",,,,";
             data += URLEncoder.encode(currentUser.getLocation(), "UTF-8");
+            data += ",";
+            data += URLEncoder.encode(String.valueOf(currentUser.getLikertScale()), "UTF-8");
+            data += ",";
+            data += URLEncoder.encode("SalvaviajesSMSJavaAppData", "UTF-8");
 
 
             String url = "http://salvaviajes.azurewebsites.net/api/Issue";
