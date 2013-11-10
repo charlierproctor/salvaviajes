@@ -114,7 +114,7 @@ public class SMSUser implements java.io.Serializable{
     public static void HTTPPost(SMSUser currentUser) throws IOException, InterruptedException {
 
         Date now = new Date();       //now!
-        String formattedDate = now.getMonth() + "-" + now.getDate() + "-" + now.getYear() + " " + now.getHours() + ":" + now.getMinutes() + ":" + now.getSeconds();
+        String formattedDate = (now.getMonth()+1) + "-" + now.getDate() + "-" + (now.getYear()+1900) + " " + now.getHours() + ":" + now.getMinutes() + ":" + now.getSeconds();
 
         int responseCode;
         HttpURLConnection con;
@@ -126,7 +126,7 @@ public class SMSUser implements java.io.Serializable{
 
             //IssueId,GUID,EncryptedFromInfo,ReportedOn,IssueDesc,CategoryId,City,State,Country,LocationDesc
 
-            data += "0,";
+            data += "=0,";
             data += UUID.randomUUID().toString();
             data += ",";
             data += URLEncoder.encode(currentUser.getPhoneNumber(),"UTF-8");
@@ -140,9 +140,6 @@ public class SMSUser implements java.io.Serializable{
             data += URLEncoder.encode(currentUser.getLocation(), "UTF-8");
             data += ",";
             data += URLEncoder.encode(String.valueOf(currentUser.getLikertScale()), "UTF-8");
-            data += ",";
-            data += URLEncoder.encode("SalvaviajesSMSJavaAppData", "UTF-8");
-
 
             String url = "http://salvaviajes.azurewebsites.net/api/Issue";
                                                  //url to post to
