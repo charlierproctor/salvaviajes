@@ -17,7 +17,7 @@
     <file path="/QueryFlow.java" changelist="e19b5e6f-5b13-4d58-8cdb-354c69e4a100" time="1383506545672" ignored="false" />
     <file path="$PROJECT_DIR$/../Toni Harp 2013 iPhone App/javaproject/voterObjectIDs.txt" changelist="e19b5e6f-5b13-4d58-8cdb-354c69e4a100" time="1383681804931" ignored="false" />
     <file path="$PROJECT_DIR$/../Toni Harp 2013 iPhone App/javaproject/volunteerObjectIDs.txt" changelist="e19b5e6f-5b13-4d58-8cdb-354c69e4a100" time="1383681804931" ignored="false" />
-    <file path="/Dummy.txt" changelist="e19b5e6f-5b13-4d58-8cdb-354c69e4a100" time="1384041091008" ignored="false" />
+    <file path="/Dummy.txt" changelist="e19b5e6f-5b13-4d58-8cdb-354c69e4a100" time="1384041534985" ignored="false" />
     <file path="/README.md" changelist="e19b5e6f-5b13-4d58-8cdb-354c69e4a100" time="1384041479739" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -151,7 +151,7 @@
       <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="19" selection-start="1294" selection-end="1294" vertical-scroll-proportion="0.60732985">
+            <state line="19" column="0" selection-start="1049" selection-end="1049" vertical-scroll-proportion="0.7460733">
               <folding />
             </state>
           </provider>
@@ -538,7 +538,11 @@
       <created>1384041100443</created>
       <updated>1384041100443</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="updated README">
+      <created>1384041540210</created>
+      <updated>1384041540210</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -750,7 +754,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="19" selection-start="1294" selection-end="1294" vertical-scroll-proportion="0.60732985">
+        <state line="19" column="0" selection-start="1049" selection-end="1049" vertical-scroll-proportion="0.7460733">
           <folding />
         </state>
       </provider>
