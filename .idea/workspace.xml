@@ -10,14 +10,14 @@
     <file path="$PROJECT_DIR$/../Toni Harp 2013 iPhone App/javaproject/.idea/workspace.xml" changelist="e19b5e6f-5b13-4d58-8cdb-354c69e4a100" time="1383411595371" ignored="false" />
     <file path="/GVoiceSMS.java" changelist="e19b5e6f-5b13-4d58-8cdb-354c69e4a100" time="1383467377547" ignored="false" />
     <file path="/Main.java" changelist="e19b5e6f-5b13-4d58-8cdb-354c69e4a100" time="1384042691253" ignored="false" />
-    <file path="/SMSAction.java" changelist="e19b5e6f-5b13-4d58-8cdb-354c69e4a100" time="1384048373064" ignored="false" />
+    <file path="/SMSAction.java" changelist="e19b5e6f-5b13-4d58-8cdb-354c69e4a100" time="1384049552527" ignored="false" />
     <file path="/SMSUser.java" changelist="e19b5e6f-5b13-4d58-8cdb-354c69e4a100" time="1384030767590" ignored="false" />
     <file path="/SMSBasic.java" changelist="e19b5e6f-5b13-4d58-8cdb-354c69e4a100" time="1383631865772" ignored="false" />
     <file path="/SMSJSON.java" changelist="e19b5e6f-5b13-4d58-8cdb-354c69e4a100" time="1383631805890" ignored="false" />
     <file path="/QueryFlow.java" changelist="e19b5e6f-5b13-4d58-8cdb-354c69e4a100" time="1383506545672" ignored="false" />
     <file path="$PROJECT_DIR$/../Toni Harp 2013 iPhone App/javaproject/voterObjectIDs.txt" changelist="e19b5e6f-5b13-4d58-8cdb-354c69e4a100" time="1383681804931" ignored="false" />
     <file path="$PROJECT_DIR$/../Toni Harp 2013 iPhone App/javaproject/volunteerObjectIDs.txt" changelist="e19b5e6f-5b13-4d58-8cdb-354c69e4a100" time="1383681804931" ignored="false" />
-    <file path="/Dummy.txt" changelist="e19b5e6f-5b13-4d58-8cdb-354c69e4a100" time="1384048475904" ignored="false" />
+    <file path="/Dummy.txt" changelist="e19b5e6f-5b13-4d58-8cdb-354c69e4a100" time="1384049172385" ignored="false" />
     <file path="/README.md" changelist="e19b5e6f-5b13-4d58-8cdb-354c69e4a100" time="1384041479739" ignored="false" />
     <file path="$PROJECT_DIR$/../Toni Harp 2013 iPhone App/javaproject/src/SendEmail.java" changelist="e19b5e6f-5b13-4d58-8cdb-354c69e4a100" time="1384042572758" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -152,7 +152,7 @@
       <file leaf-file-name="SMSAction.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/SMSAction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="197" column="66" selection-start="12051" selection-end="12051" vertical-scroll-proportion="-2.758542">
+            <state line="261" column="136" selection-start="16611" selection-end="16611" vertical-scroll-proportion="8.917995">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -581,7 +581,11 @@
       <created>1384048485291</created>
       <updated>1384048485291</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="small fix on category ids">
+      <created>1384049180148</created>
+      <updated>1384049180148</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -602,7 +606,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18071313" sideWeight="0.71652424" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2834758" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2834758" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -795,7 +799,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/SMSAction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="197" column="66" selection-start="12051" selection-end="12051" vertical-scroll-proportion="-2.758542">
+        <state line="261" column="136" selection-start="16611" selection-end="16611" vertical-scroll-proportion="8.917995">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
