@@ -295,7 +295,7 @@ public class SMSAction {
     public static String getCharForNumber(int i) {
         int j = (i-1)%25;
         char[] alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".toCharArray();
-        return Character.toString(alphabet[i]);
+        return Character.toString(alphabet[j]);
     }
 
 }

@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e19b5e6f-5b13-4d58-8cdb-354c69e4a100" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/SendEmail.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main.java" afterPath="$PROJECT_DIR$/src/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SMSAction.java" afterPath="$PROJECT_DIR$/src/SMSAction.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="DreamTeamApp.iws" />
@@ -11,14 +10,14 @@
     <file path="$PROJECT_DIR$/../Toni Harp 2013 iPhone App/javaproject/.idea/workspace.xml" changelist="e19b5e6f-5b13-4d58-8cdb-354c69e4a100" time="1383411595371" ignored="false" />
     <file path="/GVoiceSMS.java" changelist="e19b5e6f-5b13-4d58-8cdb-354c69e4a100" time="1383467377547" ignored="false" />
     <file path="/Main.java" changelist="e19b5e6f-5b13-4d58-8cdb-354c69e4a100" time="1384042691253" ignored="false" />
-    <file path="/SMSAction.java" changelist="e19b5e6f-5b13-4d58-8cdb-354c69e4a100" time="1384032583743" ignored="false" />
+    <file path="/SMSAction.java" changelist="e19b5e6f-5b13-4d58-8cdb-354c69e4a100" time="1384048373064" ignored="false" />
     <file path="/SMSUser.java" changelist="e19b5e6f-5b13-4d58-8cdb-354c69e4a100" time="1384030767590" ignored="false" />
     <file path="/SMSBasic.java" changelist="e19b5e6f-5b13-4d58-8cdb-354c69e4a100" time="1383631865772" ignored="false" />
     <file path="/SMSJSON.java" changelist="e19b5e6f-5b13-4d58-8cdb-354c69e4a100" time="1383631805890" ignored="false" />
     <file path="/QueryFlow.java" changelist="e19b5e6f-5b13-4d58-8cdb-354c69e4a100" time="1383506545672" ignored="false" />
     <file path="$PROJECT_DIR$/../Toni Harp 2013 iPhone App/javaproject/voterObjectIDs.txt" changelist="e19b5e6f-5b13-4d58-8cdb-354c69e4a100" time="1383681804931" ignored="false" />
     <file path="$PROJECT_DIR$/../Toni Harp 2013 iPhone App/javaproject/volunteerObjectIDs.txt" changelist="e19b5e6f-5b13-4d58-8cdb-354c69e4a100" time="1383681804931" ignored="false" />
-    <file path="/Dummy.txt" changelist="e19b5e6f-5b13-4d58-8cdb-354c69e4a100" time="1384041934448" ignored="false" />
+    <file path="/Dummy.txt" changelist="e19b5e6f-5b13-4d58-8cdb-354c69e4a100" time="1384048428285" ignored="false" />
     <file path="/README.md" changelist="e19b5e6f-5b13-4d58-8cdb-354c69e4a100" time="1384041479739" ignored="false" />
     <file path="$PROJECT_DIR$/../Toni Harp 2013 iPhone App/javaproject/src/SendEmail.java" changelist="e19b5e6f-5b13-4d58-8cdb-354c69e4a100" time="1384042572758" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -128,10 +127,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Main.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Main.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="220" selection-start="1418" selection-end="1418" vertical-scroll-proportion="1.0209424">
+            <state line="37" column="220" selection-start="1418" selection-end="1418" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="docComment;class#Main#0" expanded="false" />
               </folding>
@@ -142,16 +141,18 @@
       <file leaf-file-name="SendEmail.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/SendEmail.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="8" selection-start="172" selection-end="172" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="8" column="45" selection-start="276" selection-end="276" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SMSAction.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="SMSAction.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/SMSAction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="252" column="48" selection-start="15592" selection-end="15592" vertical-scroll-proportion="0.0">
+            <state line="275" column="145" selection-start="16543" selection-end="17461" vertical-scroll-proportion="0.4791155">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -198,7 +199,7 @@
       <file leaf-file-name="SMSUser.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/SMSUser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="175" column="0" selection-start="5706" selection-end="5706" vertical-scroll-proportion="0.0">
+            <state line="67" column="64" selection-start="2295" selection-end="2295" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="docComment;class#SMSUser#0" expanded="false" />
@@ -240,10 +241,10 @@
         <option value="$PROJECT_DIR$/src/SMSJSON.java" />
         <option value="$PROJECT_DIR$/src/SMSBasic.java" />
         <option value="$PROJECT_DIR$/src/SMSUser.java" />
-        <option value="$PROJECT_DIR$/src/SMSAction.java" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/SendEmail.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/src/SMSAction.java" />
       </list>
     </option>
   </component>
@@ -572,7 +573,11 @@
       <created>1384041938287</created>
       <updated>1384041938287</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="email functionality added -- &#10;emails confirmation every hr to Charlie">
+      <created>1384042865029</created>
+      <updated>1384042865029</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -583,16 +588,16 @@
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.36467236" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36467236" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32826748" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32905984" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32905984" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18071313" sideWeight="0.63532764" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18071313" sideWeight="0.67094016" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2834758" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -644,7 +649,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated README" />
+    <option name="LAST_COMMIT_MESSAGE" value="small fix on category ids" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -664,6 +669,8 @@
     <MESSAGE value="Http Post works (response code 204)&#10;-- user data is saved into database" />
     <MESSAGE value="updated sms processing logic" />
     <MESSAGE value="updated README" />
+    <MESSAGE value="email functionality added -- &#10;emails confirmation every hr to Charlie" />
+    <MESSAGE value="small fix on category ids" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -747,9 +754,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="19" selection-start="1049" selection-end="1049" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="220" selection-start="1418" selection-end="1418" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="docComment;class#Main#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SendEmail.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="45" selection-start="276" selection-end="276" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/SMSUser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="175" column="0" selection-start="5706" selection-end="5706" vertical-scroll-proportion="0.0">
+        <state line="67" column="64" selection-start="2295" selection-end="2295" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="docComment;class#SMSUser#0" expanded="false" />
@@ -759,32 +791,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/SMSAction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="252" column="48" selection-start="15592" selection-end="15592" vertical-scroll-proportion="0.0">
+        <state line="275" column="145" selection-start="16543" selection-end="17461" vertical-scroll-proportion="0.4791155">
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="19" selection-start="1049" selection-end="1049" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SendEmail.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="8" selection-start="172" selection-end="172" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="220" selection-start="1418" selection-end="1418" vertical-scroll-proportion="1.0209424">
-          <folding>
-            <element signature="docComment;class#Main#0" expanded="false" />
           </folding>
         </state>
       </provider>
