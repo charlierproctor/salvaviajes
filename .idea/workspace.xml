@@ -2,14 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e19b5e6f-5b13-4d58-8cdb-354c69e4a100" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/SendEmail.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main.java" afterPath="$PROJECT_DIR$/src/Main.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="DreamTeamApp.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="$PROJECT_DIR$/../Toni Harp 2013 iPhone App/javaproject/.idea/workspace.xml" changelist="e19b5e6f-5b13-4d58-8cdb-354c69e4a100" time="1383411595371" ignored="false" />
     <file path="/GVoiceSMS.java" changelist="e19b5e6f-5b13-4d58-8cdb-354c69e4a100" time="1383467377547" ignored="false" />
-    <file path="/Main.java" changelist="e19b5e6f-5b13-4d58-8cdb-354c69e4a100" time="1383631829433" ignored="false" />
+    <file path="/Main.java" changelist="e19b5e6f-5b13-4d58-8cdb-354c69e4a100" time="1384042691253" ignored="false" />
     <file path="/SMSAction.java" changelist="e19b5e6f-5b13-4d58-8cdb-354c69e4a100" time="1384032583743" ignored="false" />
     <file path="/SMSUser.java" changelist="e19b5e6f-5b13-4d58-8cdb-354c69e4a100" time="1384030767590" ignored="false" />
     <file path="/SMSBasic.java" changelist="e19b5e6f-5b13-4d58-8cdb-354c69e4a100" time="1383631865772" ignored="false" />
@@ -17,8 +18,9 @@
     <file path="/QueryFlow.java" changelist="e19b5e6f-5b13-4d58-8cdb-354c69e4a100" time="1383506545672" ignored="false" />
     <file path="$PROJECT_DIR$/../Toni Harp 2013 iPhone App/javaproject/voterObjectIDs.txt" changelist="e19b5e6f-5b13-4d58-8cdb-354c69e4a100" time="1383681804931" ignored="false" />
     <file path="$PROJECT_DIR$/../Toni Harp 2013 iPhone App/javaproject/volunteerObjectIDs.txt" changelist="e19b5e6f-5b13-4d58-8cdb-354c69e4a100" time="1383681804931" ignored="false" />
-    <file path="/Dummy.txt" changelist="e19b5e6f-5b13-4d58-8cdb-354c69e4a100" time="1384041534985" ignored="false" />
+    <file path="/Dummy.txt" changelist="e19b5e6f-5b13-4d58-8cdb-354c69e4a100" time="1384041934448" ignored="false" />
     <file path="/README.md" changelist="e19b5e6f-5b13-4d58-8cdb-354c69e4a100" time="1384041479739" ignored="false" />
+    <file path="$PROJECT_DIR$/../Toni Harp 2013 iPhone App/javaproject/src/SendEmail.java" changelist="e19b5e6f-5b13-4d58-8cdb-354c69e4a100" time="1384042572758" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,13 +128,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Main.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Main.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="2" selection-start="345" selection-end="345" vertical-scroll-proportion="0.0">
+            <state line="37" column="220" selection-start="1418" selection-end="1418" vertical-scroll-proportion="1.0209424">
               <folding>
                 <element signature="docComment;class#Main#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SendEmail.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/SendEmail.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="8" selection-start="172" selection-end="172" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -148,10 +159,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="README.md" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="0" selection-start="1049" selection-end="1049" vertical-scroll-proportion="0.7460733">
+            <state line="19" column="19" selection-start="1049" selection-end="1049" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -227,11 +238,12 @@
         <option value="$PROJECT_DIR$/src/GVoiceSMS.java" />
         <option value="$PROJECT_DIR$/src/QueryFlow.java" />
         <option value="$PROJECT_DIR$/src/SMSJSON.java" />
-        <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/SMSBasic.java" />
         <option value="$PROJECT_DIR$/src/SMSUser.java" />
         <option value="$PROJECT_DIR$/src/SMSAction.java" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/src/SendEmail.java" />
+        <option value="$PROJECT_DIR$/src/Main.java" />
       </list>
     </option>
   </component>
@@ -319,6 +331,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DreamTeamApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="datafest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -542,7 +568,11 @@
       <created>1384041540210</created>
       <updated>1384041540210</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="updated README">
+      <created>1384041938287</created>
+      <updated>1384041938287</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -647,13 +677,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/GVoiceSMS.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="42" selection-start="1148" selection-end="1148" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/SMSUser.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="133" column="0" selection-start="4249" selection-end="4249" vertical-scroll-proportion="0.0">
@@ -734,15 +757,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="2" selection-start="345" selection-end="345" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="docComment;class#Main#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/SMSAction.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="252" column="48" selection-start="15592" selection-end="15592" vertical-scroll-proportion="0.0">
@@ -754,8 +768,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="0" selection-start="1049" selection-end="1049" vertical-scroll-proportion="0.7460733">
+        <state line="19" column="19" selection-start="1049" selection-end="1049" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SendEmail.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="8" selection-start="172" selection-end="172" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="220" selection-start="1418" selection-end="1418" vertical-scroll-proportion="1.0209424">
+          <folding>
+            <element signature="docComment;class#Main#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
