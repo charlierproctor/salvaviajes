@@ -195,7 +195,7 @@ public class SMSAction {
                     //this creates the string to prompt for a category
                     StringBuffer sB = new StringBuffer("Please respond: ");
                     for(int i = 0; i<categories.size(); i++){
-                        String responseCode = getCharForNumber(i);
+                        String responseCode = getCharForNumber(i+1);
                         sB.append(responseCode + " for " + categories.get(i) + "; ");
                     }
                     sB.append(".");
